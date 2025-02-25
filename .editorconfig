@@ -18,3 +18,9 @@ indent_size = 2
 indent_size = 2
 
 ### DO NOT MODIFY ABOVE THIS LINE ###
+
+[{*.css,*.scss}]
+indent_size = 2
+
+[*.js]
+indent_size = 2
