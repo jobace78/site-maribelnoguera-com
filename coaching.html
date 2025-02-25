@@ -1,0 +1,22 @@
+---
+layout: default_style
+permalink: /coaching
+---
+
+<!-- Main Container -->
+<div id="banners"></div>
+
+<div class="container">
+    {% for post in site.categories.coaching reversed %}
+    <div class="blog-post">
+        <h1 class="blog-title" id="{{ post.title }}">{{ post.title }}</h1>
+        <br>
+        <img src="{{ site.baseurl }}/assets/img/other/{{ post.picture }}" alt="Feature-img" class="blog-image" width="100%">
+        <br>
+        <p>{{ post.description }}</p>
+        <span class="badge">{{ post.date | date: '%B %d, %Y' }}</span>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+<!-- End Main Container -->

@@ -84,10 +84,26 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.html
 
 .blog-post {
   margin-bottom: 30px;
+  /* custom begin */
+  height: auto;
+  width: 100%;
+  /* custom end */
 }
+
+/* custom begin */
+.blog-post li {
+  list-style-type: square;
+  margin-bottom: 10px;
+}
+/* custom end */
 
 .blog-image {
   margin-bottom: 20px;
+  /* custom begin */
+  height: 100%;
+  max-height: 256px;
+  width: auto;
+  /* custom end */
 }
 
 .carousel-inner {
