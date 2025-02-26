@@ -17,6 +17,6 @@ description: "
 
 <p>Mi trabajo en estos casos es brindarte mi acompañamiento, desde el respeto más profundo, para ayudarte a transitar todas y cada una de las fases por las que estés pasando a fin de que no se quede ningún bloqueo emocional en ninguna de ellas y se pueda llegar a conseguir cerrar el proceso con una bonita despedida.</p>
 "
-category: terapia
+category: terapia-acompanamiento-duelos
 picture: acompanamiento-duelos.jpeg
 ---

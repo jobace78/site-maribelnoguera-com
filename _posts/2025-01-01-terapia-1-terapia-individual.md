@@ -35,6 +35,6 @@ description: "
 
 <p>¿Te animas a embarcarte conmigo en un viaje hacia tu autodescubrimiento y ver lo lejos que puedes llegar?</p>
 "
-category: terapia
+category: terapia-terapia-individual
 picture: terapia-individual.jpeg
 ---

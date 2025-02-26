@@ -16,6 +16,6 @@ description: "
 
 <p>El método de Coaching WingWave construye los cimientos para el éxito, lo que incluye un incremento de la creatividad, una auto percepción más positiva y un incremento del carisma mediante el <i>fortalecimiento del yo</i> y mejorando la visualización de metas. El coaching WingWave aporta la preparación mental para un máximo rendimiento. Asuntos tales como ansiedad ante los exámenes y miedo escénico pueden ser tratados fácilmente y convertidos en absoluta confianza en uno mismo.</p>
 "
-category: coaching
+category: coaching-coaching-para-estudiantes
 picture: coaching-para-estudiantes.jpeg
 ---

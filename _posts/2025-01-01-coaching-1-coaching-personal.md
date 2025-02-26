@@ -15,6 +15,6 @@ description: "
 
 <p>Te aseguro que te vas a llevar una grata sorpresa cuando veas las metas que puedes llegar a alcanzar si te lo propones. Y yo estoy dispuesta a acompañarte y guiarte en este bonito proceso.</p>
 "
-category: coaching
+category: coaching-coaching-personal
 picture: coaching-personal.jpeg
 ---
