@@ -1,0 +1,173 @@
+[env]
+BUNDLE_BIN = "{{ env.HOME }}/.bundles/{{ config_root | basename }}/bin"
+BUNDLE_PATH = "{{ env.HOME }}/.bundles/{{ config_root | basename }}"
+#
+# Notes:
+#   - only used when installing gems directly with 'gem install' without bundler, NOT needed for projects with 'Gemfile'...
+#
+GEM_HOME = "{{ env.HOME }}/.gems/{{ config_root | basename }}"
+#
+# Notes:
+#   - only used when installing gems directly with 'gem install' without bundler, NOT needed for projects with 'Gemfile'...
+#
+GEM_PATH = "{{ env.HOME }}/.gems/{{ config_root | basename }}"
+_BUNDLER_VERSION = "~> 2.4.0"
+_MISE_ENV = "{{ config_root | basename }}"
+[tasks.clean]
+alias = "c"
+description = "(bundle) clean"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+if [ -f Gemfile ]; then
+    bundle clean --force 2> /dev/null || true
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks.doctor]
+alias = "d"
+description = "doctor"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+cat << EOT
+
+===> BUNDLE_BIN
+${BUNDLE_BIN:?}
+===> BUNDLE_PATH
+${BUNDLE_PATH:?}
+===> GEM_HOME (only used when installing gems directly with 'gem install' without bundler, NOT needed for projects with 'Gemfile'...)
+${GEM_HOME:?}
+===> GEM_PATH (only used when installing gems directly with 'gem install' without bundler, NOT needed for projects with 'Gemfile'...)
+${GEM_PATH:?}
+===> bundle version
+$(bundle --version)
+===> gem version
+$(gem --version)
+===> ruby location
+$(command -v ruby)
+===> ruby version
+$(ruby --version)
+
+EOT
+"""
+[tasks."gem:cleanup"]
+alias = "gc"
+description = "(bundle exec) gem cleanup"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+if [ -f Gemfile ]; then
+    bundle exec gem cleanup
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks."gem:list"]
+alias = "gl"
+description = "(bundle exec) gem list"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+if [ -f Gemfile ]; then
+    bundle exec gem list
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks.install]
+alias = "i"
+description = "install"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+mkdir -p {{ env.HOME }}/.bundle
+mkdir -p {{ env.HOME }}/.bundles/{{ config_root | basename }}
+mkdir -p {{ env.HOME }}/.gem
+mkdir -p {{ env.HOME }}/.gems/{{ config_root | basename }}
+gem install bundler --no-document --version "${_BUNDLER_VERSION}"
+if [ -f Gemfile ]; then
+    bundle install
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks."jekyll:build"]
+alias = "jb"
+description = "(bundle exec) jekyll build"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+if [ -f Gemfile ]; then
+    bundle exec jekyll build
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks."jekyll:serve"]
+alias = "js"
+description = "(bundle exec) jekyll serve"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+if [ -f Gemfile ]; then
+    bundle exec jekyll serve
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks.prune]
+alias = "p"
+description = "prune"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+echo "===> cleaning [{{ env.HOME }}/.bundle]..."
+rm -rfv {{ env.HOME }}/.bundle
+echo "===> cleaning [{{ env.HOME }}/.bundles/{{ config_root | basename }}]..."
+rm -rfv {{ env.HOME }}/.bundles/{{ config_root | basename }}
+echo "===> cleaning [{{ env.HOME }}/.gem]..."
+rm -rfv {{ env.HOME }}/.gem
+echo "===> cleaning [{{ env.HOME }}/.gems/{{ config_root | basename }}]..."
+rm -rfv {{ env.HOME }}/.gems/{{ config_root | basename }}
+"""
+[tasks.update]
+alias = "u"
+description = "(bundle) update"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+if [ -f Gemfile ]; then
+    bundle update
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tools]
+ruby = "2.7"
