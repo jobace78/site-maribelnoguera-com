@@ -16,7 +16,7 @@
 title: Maribel Noguera
 email: info@maribelnoguera.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Maribel Noguera
+  Nuestra web ofrece servicios de coaching y terapia personalizados para ayudarte a alcanzar tu bienestar emocional y crecimiento personal. A través de sesiones individuales y programas especializados, brindamos herramientas y estrategias para afrontar traumas, gestionar el estrés, mejorar la autoestima y alcanzar tus metas. Descubre cómo podemos acompañarte en tu proceso de transformación y bienestar.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.maribelnoguera.com # the base hostname & protocol for your site, e.g. http://example.com
 ## twitter_username: jekyllrb
@@ -46,4 +46,5 @@ company_email: info@maribelnoguera.com
 company_feedback_form: https://formspree.io/f/xpwwopeq
 company_name: Maribel Noguera
 company_phone: +34 696 897 730
-facebook_link: https://www.facebook.com/
+facebook_link: https://www.facebook.com/calmatumente.terapia
+instagram_link: https://www.instagram.com/calmatumente.terapia

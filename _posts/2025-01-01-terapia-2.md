@@ -1,7 +1,7 @@
 ---
 title: "ACOMPAÑAMIENTO DUELOS"
 description: "
-<p>Cuando hablamos de duelos, normalmente, se tiende a asociarlo con la muerte de algún ser querido. Desde mi humilde punto de vista, el duelo es un proceso natural de la persona, que se produce ante una pérdida significativa en su vida, sea voluntaria o involuntariamente.</p>
+<p>Cuando hablamos de duelos, normalmente, se tiende a asociarlo con la muerte de algún ser querido. Desde mi punto de vista, el duelo es un proceso natural de la persona, que se produce ante una pérdida significativa en su vida, sea voluntaria o involuntariamente.</p>
 
 <p>Os expongo varios ejemplos para verlo más claro:</p>
 
