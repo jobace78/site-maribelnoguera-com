@@ -21,6 +21,8 @@ run = """
 
 set -e -o pipefail
 
+cd {{ config_root }} || exit 1
+
 if [ -f Gemfile ]; then
     bundle clean --force 2> /dev/null || true
 else
@@ -35,6 +37,8 @@ run = """
 #!/usr/bin/env bash
 
 set -e -o pipefail
+
+cd {{ config_root }} || exit 1
 
 cat << EOT
 
@@ -65,6 +69,8 @@ run = """
 
 set -e -o pipefail
 
+cd {{ config_root }} || exit 1
+
 if [ -f Gemfile ]; then
     bundle exec gem cleanup
 else
@@ -80,6 +86,8 @@ run = """
 
 set -e -o pipefail
 
+cd {{ config_root }} || exit 1
+
 if [ -f Gemfile ]; then
     bundle exec gem list
 else
@@ -94,6 +102,8 @@ run = """
 #!/usr/bin/env bash
 
 set -e -o pipefail
+
+cd {{ config_root }} || exit 1
 
 mkdir -p {{ env.HOME }}/.bundle
 mkdir -p {{ env.HOME }}/.bundles/{{ config_root | basename }}
@@ -115,6 +125,8 @@ run = """
 
 set -e -o pipefail
 
+cd {{ config_root }} || exit 1
+
 if [ -f Gemfile ]; then
     bundle exec jekyll build
 else
@@ -130,6 +142,8 @@ run = """
 
 set -e -o pipefail
 
+cd {{ config_root }} || exit 1
+
 if [ -f Gemfile ]; then
     bundle exec jekyll serve
 else
@@ -144,6 +158,8 @@ run = """
 #!/usr/bin/env bash
 
 set -e -o pipefail
+
+cd {{ config_root }} || exit 1
 
 echo "===> cleaning [{{ env.HOME }}/.bundle]..."
 rm -rfv {{ env.HOME }}/.bundle
@@ -161,6 +177,8 @@ run = """
 #!/usr/bin/env bash
 
 set -e -o pipefail
+
+cd {{ config_root }} || exit 1
 
 if [ -f Gemfile ]; then
     bundle update
