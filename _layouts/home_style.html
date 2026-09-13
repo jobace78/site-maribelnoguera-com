@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+
+{% include head.html %}
+{% include header.html %}
+{% include script.html %}
+
+<body>
+
+<!-- Begin #carousel-section -->
+<section id="carousel-section" class="section-global-wrapper">
+    <div class="container-fluid-kamn">
+        <div class="row">
+            <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators visible-lg">
+                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-1" data-slide-to="1"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- Begin Slide 1 -->
+                    <div class="item active">
+                        <img src="{{ site.baseurl }}/assets/img/other/inicio-slider-1.jpeg" height="400"
+                             alt="slider 1">
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title hidden-xs">Maribel Noguera</h3>
+                            <!-- <p class="carousel-body">COMENTARIO 1</p> -->
+                        </div>
+                    </div>
+                    <!-- End Slide 1 -->
+                    <!-- Begin Slide 2 -->
+                    <div class="item">
+                        <img src="{{ site.baseurl }}/assets/img/other/inicio-slider-2.jpeg" height="400"
+                             alt="slider 2">
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title hidden-xs">Maribel Noguera</h3>
+                            <!-- <p class="carousel-body">COMENTARIO 2</p> -->
+                        </div>
+                    </div>
+                    <!-- End Slide 2 -->
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-1" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-1" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End #carousel-section -->
+
+<!-- Begin #services-section -->
+<section id="services" class="services-section section-global-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="services-header">
+                <!-- <h3 class="services-header-title">Servicios</h3> -->
+                <p class="services-header-body"><em>¿En qué te puedo ayudar?</em></p>
+                <hr>
+            </div>
+        </div>
+        <!-- Begin Services Row 1 -->
+        <div class="row services-row services-row-head services-row-1">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="services-group wow animated zoomIn" data-wow-offset="40">
+                    <p class="services-icon"><span class="fa fa-heart fa-3x"></span></p>
+                    <h4 class="services-title">Terapia individual</h4>
+                    <p class="services-body">Un viaje hacia el autodescubrimiento de uno mismo y un espacio para
+                        trabajar todo lo que te genere dificultad en tu día a día.</p>
+                    <p class="services-more"><a href="{{ site.baseurl }}/terapia/terapia-individual.html">Saber
+                        más...</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="services-group wow animated zoomIn" data-wow-offset="40">
+                    <p class="services-icon"><i class="fa fa-heart fa-3x"></i></p>
+                    <h4 class="services-title">Acompañamiento duelos</h4>
+                    <p class="services-body">Construyamos juntos el camino hacia la recuperación tras cualquier pérdida
+                        importante en nuestra vida, sea del tipo de sea.</p>
+                    <p class="services-more"><a href="{{ site.baseurl }}/terapia/acompanamiento-duelos.html">Saber
+                        más...</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End Services Row 1 -->
+        <!-- Begin Services Row 2 -->
+        <div class="row services-row services-row-tail services-row-2">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="services-group wow animated zoomIn" data-wow-offset="40">
+                    <p class="services-icon"><span class="fa fa-star fa-3x"></span></p>
+                    <h4 class="services-title">Coaching personal</h4>
+                    <p class="services-body">Un camino hacia la liberación del estrés, ansiedad, miedos, fobias y todo
+                        tipo de bloqueos.</p>
+                    <p class="services-more"><a href="{{ site.baseurl }}/coaching/coaching-personal.html">Saber
+                        más...</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="services-group wow animated zoomIn" data-wow-offset="40">
+                    <p class="services-icon"><i class="fa fa-star fa-3x"></i></p>
+                    <h4 class="services-title">Coaching para estudiantes</h4>
+                    <p class="services-body">Una gran ayuda para desarrollar tus capacidades y aumentar tu creatividad y
+                        capacidad de concentración.</p>
+                    <p class="services-more"><a href="{{ site.baseurl }}/coaching/coaching-para-estudiantes.html">Saber
+                        más...</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Services Row 2 -->
+    </div>
+</section>
+<!-- End #services-section -->
+
+</body>
+
+{% include footer.html %}
+</html>

@@ -1,0 +1,32 @@
+<!-- Head -->
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if site.google_analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics_id }}');
+    </script>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/ico/favicon.ico">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap-3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/animate-3.7.2.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<!-- End Head -->

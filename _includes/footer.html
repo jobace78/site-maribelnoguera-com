@@ -1,0 +1,46 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3><i class="fa fa-map-marker"></i> Contacto</h3>
+                <p class="footer-contact">
+                    {{ site.company_name }} <br>
+                    <a href="tel:{{ site.company_phone }}">{{ site.company_phone }}</a> <br>
+                    <a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a> <br>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3><i class="fa fa-external-link"></i> Enlaces</h3>
+                <p><a href="{{ site.baseurl }}/terapia.html"> Terapia</a></p>
+                <p><a href="{{ site.baseurl }}/coaching.html"> Coaching</a></p>
+                <p><a href="{{ site.baseurl }}/contact.html"> Contacto</a></p>
+                <p><a href="{{ site.baseurl }}/about.html"> Sobre mi</a></p>
+            </div>
+            <div class="col-md-4">
+                <h3><i class="fa fa-heart"></i> Sígueme</h3>
+                <div id="social-icons">
+                    {% if site.facebook_link %}
+                    <a href="{{ site.facebook_link }}" class="btn-group facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.instagram_link %}
+                    <a href="{{ site.instagram_link }}" class="btn-group instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.whatsapp_link %}
+                    <a href="{{ site.whatsapp_link }}" class="btn-group whatsapp">
+                        <i class="fa fa-whatsapp"></i>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright text center">
+        <p>&copy; Copyright {{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/index.html">Maribel Noguera</a>
+    </div>
+</footer>
+<!-- End Footer -->

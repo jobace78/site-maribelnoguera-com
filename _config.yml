@@ -1,0 +1,52 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Maribel Noguera
+email: info@maribelnoguera.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Nuestra web ofrece servicios de coaching y terapia personalizados para ayudarte a alcanzar tu bienestar emocional y crecimiento personal. A través de sesiones individuales y programas especializados, brindamos herramientas y estrategias para afrontar traumas, gestionar el estrés, mejorar la autoestima y alcanzar tus metas. Descubre cómo podemos acompañarte en tu proceso de transformación y bienestar.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://www.maribelnoguera.com # the base hostname & protocol for your site, e.g. http://example.com
+## twitter_username: jekyllrb
+## github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+## theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+company_address: Carrer des Pou Bo 10, 07350, Illes Balears, Spain
+company_address_google_map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.4123979032324!2d2.8411636761997108!3d39.685430671566486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297c14414b0e911%3A0x6b7af02cfcd511ac!2sCarrer%20des%20Pou%20Bo%2C%2010%2C%2007350%20Binissalem%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1740522899554!5m2!1ses!2ses
+company_email: info@maribelnoguera.com
+company_feedback_form: https://formspree.io/f/xpwwopeq
+company_name: Maribel Noguera
+company_phone: +34 696 897 730
+facebook_link: https://www.facebook.com/calmatumente.terapia
+google_analytics_id: G-1WH0W8LPWS
+instagram_link: https://www.instagram.com/calmatumente.terapia
+whatsapp_link: https://wa.me/34696897730
