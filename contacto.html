@@ -1,0 +1,52 @@
+---
+layout: page
+title: Contacto — terapeuta Gestalt en Mallorca
+heading: Contacto
+description: >-
+  Contacta con Maribel Noguera: Terapia Gestalt y Coaching en Mallorca.
+  Primera cita gratuita, sesiones presenciales y online. WhatsApp o formulario.
+permalink: /contacto/
+---
+
+<div class="contact-grid">
+    <div>
+        <p>
+            {{ site.company_name }}<br>
+            {{ site.company_address }}<br>
+            <a href="tel:{{ site.company_phone | remove: ' ' }}">{{ site.company_phone }}</a><br>
+            <a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a>
+        </p>
+        <p><a class="btn btn-accent" href="{{ site.whatsapp_link }}">Escríbeme por WhatsApp</a></p>
+        <p><em>Las <strong>sesiones</strong> se ofrecen tanto de manera presencial como online. En el modo online
+            es preciso que sea mediante videollamada, ya que es importante el contacto visual para analizar el
+            lenguaje corporal, crear un clima adecuado y un vínculo entre <strong>terapeuta</strong> y
+            cliente.</em></p>
+        <p><em>¡Pide una primera <strong>cita gratuita</strong> y sin compromiso!</em></p>
+        <p><em>Este formulario es completamente confidencial y no queda registrado en tu móvil ni en ningún otro
+            dispositivo.</em></p>
+    </div>
+    <div>
+        <form action="{{ site.company_feedback_form }}" method="post">
+            <div class="form-group">
+                <label for="fullname">Nombre *</label>
+                <input type="text" name="fullname" id="fullname" required autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje *</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+            </div>
+            <p class="form-privacy-note">Al enviar, aceptas que use tus datos solo para responderte.
+                Más información en la <a href="{{ '/politica-de-privacidad/' | relative_url }}">política
+                de privacidad</a>.</p>
+            <button class="btn btn-accent" type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+<div class="contact-map section">
+    <iframe src="{{ site.company_address_google_map }}" title="Mapa de la consulta en Binissalem"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</div>

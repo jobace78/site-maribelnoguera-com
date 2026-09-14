@@ -1,0 +1,47 @@
+---
+layout: page
+title: Política de cookies
+heading: Política de cookies
+description: >-
+  Información sobre las cookies que utiliza este sitio web, su finalidad,
+  duración y cómo aceptarlas, rechazarlas o cambiar tu elección.
+permalink: /politica-de-cookies/
+sitemap: false
+---
+
+<div class="prose">
+    <h2>¿Qué son las cookies?</h2>
+    <p>Las cookies son pequeños archivos que un sitio web guarda en tu navegador para recordar información
+        entre visitas. Algunas son imprescindibles para que la web funcione, otras, como las de análisis,
+        son opcionales y solo se instalan si las aceptas.</p>
+
+    <h2>¿Qué cookies utiliza esta web?</h2>
+    <p><strong>Cookies de análisis (opcionales, solo si las aceptas):</strong> utilizo Google Analytics,
+        un servicio de Google LLC, para saber de forma agregada qué páginas interesan más. Google puede
+        instalar las cookies <code>_ga</code> y <code>_ga_*</code>, con una duración máxima de 2 años.
+        Puedes consultar cómo trata Google estos datos en su
+        <a href="https://policies.google.com/technologies/cookies?hl=es" rel="noopener">política de cookies</a>.</p>
+    <p>Tu elección (aceptar o rechazar) se guarda en tu navegador para no volver a preguntarte,
+        no contiene datos personales.</p>
+    <p>Esta web no utiliza cookies publicitarias ni de perfilado.</p>
+
+    <h2>¿Cómo cambiar tu elección?</h2>
+    <p>Puedes cambiar tu decisión en cualquier momento:</p>
+    <p><button class="btn btn-accent" type="button" id="reset-cookie-consent">Cambiar mi elección de cookies</button></p>
+    <p>También puedes eliminar las cookies ya instaladas desde la configuración de tu navegador.</p>
+
+    <h2>Responsable</h2>
+    <p>{{ site.company_name }} — {{ site.company_address }}.</p>
+    <p>Para cualquier consulta sobre esta política puedes escribirme a
+        <a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a>.
+        Tienes más información sobre tus derechos en materia de protección de datos en la
+        <a href="https://www.aepd.es" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
+</div>
+<script>
+    (function () {
+        document.getElementById('reset-cookie-consent').addEventListener('click', function () {
+            localStorage.removeItem('cookie-consent');
+            location.href = '{{ "/" | relative_url }}';
+        });
+    })();
+</script>

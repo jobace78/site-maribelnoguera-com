@@ -1,0 +1,14 @@
+<article class="service-card">
+    <picture>
+        <source srcset="{{ '/assets/img/services/' | append: include.service.slug_img | append: '-800.webp' | relative_url }}"
+                type="image/webp">
+        <img src="{{ '/assets/img/services/' | append: include.service.slug_img | append: '-800.jpg' | relative_url }}"
+             alt="{{ include.service.image_alt }}" width="800" height="500" loading="lazy">
+    </picture>
+    <div>
+        <span class="card-tag">{{ include.service.category | capitalize }}</span>
+        <h3>{{ include.service.heading }}</h3>
+        <p>{{ include.service.excerpt_text }}</p>
+        <a href="{{ include.service.url | relative_url }}">Saber más →</a>
+    </div>
+</article>

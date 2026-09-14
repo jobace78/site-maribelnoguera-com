@@ -1,0 +1,13 @@
+---
+permalink: /robots.txt
+sitemap: false
+---
+# {{ site.url }}{{ site.baseurl }}/robots.txt
+User-agent: *
+{% if site.staging -%}
+Disallow: /
+{%- else -%}
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
+{%- endif %}

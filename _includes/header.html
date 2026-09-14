@@ -1,38 +1,32 @@
-<!-- Header -->
-<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+<header class="site-header">
     <div class="container">
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target=".navbar-responsive-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand wow fadeInDownBig" href="index.html"><img class="office-logo"
-                                                                             src="{{ site.baseurl }}/assets/img/slider/office.png"
-                                                                             alt="Office"></a> -->
-        </div>
-        <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav pull-right">
-                <li class="active">
-                    <a href="{{ site.baseurl }}/index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/terapia.html">Terapia</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/coaching.html">Coaching</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/contact.html"><span>Contacto</span></a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/about.html">Sobre mi</a>
-                </li>
+        <nav class="site-nav" aria-label="Principal">
+            <a class="site-brand" href="{{ '/' | relative_url }}">Maribel Noguera</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list"
+                    aria-label="Abrir menú">☰</button>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="{{ '/' | relative_url }}"
+                       {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>Inicio</a></li>
+                <li><a href="{{ '/terapia/' | relative_url }}"
+                       {% if page.url contains '/terapia' %}class="active"{% endif %}>Terapia</a></li>
+                <li><a href="{{ '/coaching/' | relative_url }}"
+                       {% if page.url contains '/coaching' %}class="active"{% endif %}>Coaching</a></li>
+                <li><a href="{{ '/sobre-mi/' | relative_url }}"
+                       {% if page.url contains '/sobre-mi' %}class="active"{% endif %}>Sobre mí</a></li>
+                <li><a href="{{ '/contacto/' | relative_url }}"
+                       {% if page.url contains '/contacto' %}class="active"{% endif %}>Contacto</a></li>
+                <li><a class="btn btn-whatsapp" href="{{ site.whatsapp_link }}">WhatsApp</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
-</nav>
-<!-- End Header -->
+</header>
+<script>
+    (function () {
+        var list = document.getElementById('nav-list');
+        var toggle = document.querySelector('.nav-toggle');
+        toggle.addEventListener('click', function () {
+            var open = list.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+    })();
+</script>

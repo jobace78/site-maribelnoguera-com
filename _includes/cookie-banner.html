@@ -1,0 +1,48 @@
+{% if site.google_analytics_id %}
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+    <p>Utilizo cookies de análisis (Google Analytics) solo para saber qué páginas interesan más.
+        Si las rechazas, todo funciona igual.
+        <a href="{{ '/politica-de-cookies/' | relative_url }}">Más información</a>.</p>
+    <div class="cookie-banner-actions">
+        <button class="btn btn-accent" type="button" data-consent="accepted">Aceptar</button>
+        <button class="btn btn-outline" type="button" data-consent="rejected">Rechazar</button>
+    </div>
+</div>
+<script>
+    (function () {
+        var banner = document.getElementById('cookie-banner');
+
+        function loadAnalytics() {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}';
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', '{{ site.google_analytics_id }}');
+        }
+
+        var consent = localStorage.getItem('cookie-consent');
+        if (consent === 'accepted') {
+            loadAnalytics();
+        } else if (consent !== 'rejected') {
+            banner.hidden = false;
+            banner.addEventListener('click', function (event) {
+                var choice = event.target.getAttribute('data-consent');
+                if (choice) {
+                    localStorage.setItem('cookie-consent', choice);
+                    banner.hidden = true;
+                    if (choice === 'accepted') {
+                        loadAnalytics();
+                    }
+                }
+            });
+        }
+    })();
+</script>
+{% endif %}

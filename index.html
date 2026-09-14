@@ -1,3 +1,114 @@
 ---
-layout: home_style
+layout: base
+title: Terapia Gestalt y Coaching en Mallorca
+description: >-
+  Terapia Gestalt y Coaching en Mallorca. Acompañamiento
+  personalizado hacia tu bienestar emocional, presencial y online. Primera
+  cita gratuita.
+image: /assets/img/hero-1600.jpg
 ---
+
+<section class="hero">
+    <div class="hero-slide is-active">
+        <picture>
+            <source media="(min-width: 800px)" srcset="{{ '/assets/img/hero-1600.webp' | relative_url }}"
+                    type="image/webp">
+            <source srcset="{{ '/assets/img/hero-800.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/hero-1600.jpg' | relative_url }}"
+                 alt="Paisaje sereno de Mallorca" width="1600" height="1048" fetchpriority="high">
+        </picture>
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+        <picture>
+            <source media="(min-width: 800px)" srcset="{{ '/assets/img/hero-2-1600.webp' | relative_url }}"
+                    type="image/webp">
+            <source srcset="{{ '/assets/img/hero-2-800.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/hero-2-1600.jpg' | relative_url }}"
+                 alt="La consulta, un espacio tranquilo para las sesiones" width="1600" height="1048"
+                 loading="lazy">
+        </picture>
+    </div>
+    <div class="hero-inner">
+        <h1>Terapia Gestalt y Coaching en Mallorca — presencial y online</h1>
+        <a class="btn btn-accent" href="{{ site.whatsapp_link }}">Reserva una primera sesión gratuita</a>
+    </div>
+    <div class="hero-dots">
+        <button class="hero-dot is-active" type="button" aria-label="Ver foto 1"></button>
+        <button class="hero-dot" type="button" aria-label="Ver foto 2"></button>
+    </div>
+</section>
+<script>
+    (function () {
+        var slides = document.querySelectorAll('.hero-slide');
+        var dots = document.querySelectorAll('.hero-dot');
+        var current = 0;
+        var timer = null;
+
+        function show(index) {
+            slides[current].classList.remove('is-active');
+            slides[current].setAttribute('aria-hidden', 'true');
+            dots[current].classList.remove('is-active');
+            current = index;
+            slides[current].classList.add('is-active');
+            slides[current].removeAttribute('aria-hidden');
+            dots[current].classList.add('is-active');
+        }
+
+        function start() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                return;
+            }
+            timer = setInterval(function () {
+                show((current + 1) % slides.length);
+            }, 6000);
+        }
+
+        dots.forEach(function (dot, index) {
+            dot.addEventListener('click', function () {
+                clearInterval(timer);
+                show(index);
+                start();
+            });
+        });
+        start();
+    })();
+</script>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">¿En qué puedo acompañarte?</h2>
+        <div class="services-grid">
+            {% assign terapia_items = site.services | where: 'category', 'terapia' | sort: 'order' %}
+            {% assign coaching_items = site.services | where: 'category', 'coaching' | sort: 'order' %}
+            {% assign items = terapia_items | concat: coaching_items %}
+            {% for service in items %}
+            {% include service-card.html service=service %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="intro-strip">
+            <picture>
+                <source srcset="{{ '/assets/img/maribel-320.webp' | relative_url }}" type="image/webp">
+                <img class="intro-photo" src="{{ '/assets/img/maribel-320.jpg' | relative_url }}"
+                     alt="Maribel Noguera, terapeuta Gestalt y coach" width="320" height="320" loading="lazy">
+            </picture>
+            <div>
+                <h2>Soy Maribel</h2>
+                <p>Terapeuta Gestalt y coach WingWave certificada. Me apasiona acompañar y brindar ayuda a las
+                    personas que en un momento u otro de su vida la necesitan. Desde mis conocimientos y mi
+                    acompañamiento te invito a navegar hacia tu propio autodescubrimiento.</p>
+                <a href="{{ '/sobre-mi/' | relative_url }}">Conoce mi historia →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote-band">
+    <div class="container">
+        <blockquote>«Cada momento es único e irrepetible»</blockquote>
+    </div>
+</section>

@@ -1,23 +1,15 @@
 ---
-layout: default_style
-permalink: /coaching
+layout: hub
+title: Coaching en Mallorca
+heading: Coaching
+description: >-
+  Coaching personal y para estudiantes en Mallorca, con el método
+  WingWave. Alcanza tus metas con acompañamiento. Presencial y online.
+category: coaching
+redirect_from: [/coaching.html]
+intro: >-
+  El coaching te ayuda a pasar de la intención a la acción: definir metas,
+  desbloquear miedos y gestionar tus emociones con el método WingWave,
+  presencial en Binissalem u online.
+permalink: /coaching/
 ---
-
-<!-- Main Container -->
-<div id="banners"></div>
-
-<div class="container">
-    {% for post in site.categories.coaching reversed %}
-    <div class="blog-post">
-        <h1 class="blog-title" id="{{ post.title }}">{{ post.title }}</h1>
-        <br>
-        <img src="{{ site.baseurl }}/assets/img/other/{{ post.picture }}" alt="Feature-img" class="blog-image"
-             width="100%">
-        <br>
-        <p>{{ post.description }}</p>
-        <!-- <span class="badge">{{ post.date | date: '%B %d, %Y' }}</span> -->
-    </div>
-    <hr>
-    {% endfor %}
-</div>
-<!-- End Main Container -->

@@ -1,0 +1,51 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@id": "{{ site.url }}/#business",
+    "@type": "Psychologist",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES",
+        "addressLocality": "Binissalem",
+        "addressRegion": "Illes Balears",
+        "postalCode": "07350",
+        "streetAddress": "Carrer des Pou Bo 10"
+    },
+    "areaServed": "Mallorca",
+    "description": {{ site.description | strip_newlines | strip | jsonify }},
+    "email": "{{ site.company_email }}",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ site.company_geo_latitude }},
+        "longitude": {{ site.company_geo_longitude }}
+    },
+    "image": "{{ site.url }}/assets/img/hero-1600.jpg",
+    "name": "{{ site.company_name }}",
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "closes": "19:00",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "15:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "closes": "13:00",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00"
+        }
+    ],
+    "sameAs": [
+        "{{ site.facebook_link }}",
+        "{{ site.instagram_link }}"
+    ],
+    "telephone": "{{ site.company_phone }}",
+    "url": "{{ site.url }}/"
+}
+</script>

@@ -1,46 +1,41 @@
-<!-- Footer -->
-<footer>
+<footer class="site-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h3><i class="fa fa-map-marker"></i> Contacto</h3>
-                <p class="footer-contact">
-                    {{ site.company_name }} <br>
-                    <a href="tel:{{ site.company_phone }}">{{ site.company_phone }}</a> <br>
-                    <a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a> <br>
+        <div class="footer-grid">
+            <div>
+                <h3>Contacto</h3>
+                <p>
+                    {{ site.company_name }}<br>
+                    {{ site.company_address }}<br>
+                    <a href="tel:{{ site.company_phone | remove: ' ' }}">{{ site.company_phone }}</a><br>
+                    <a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a>
                 </p>
             </div>
-            <div class="col-md-4">
-                <h3><i class="fa fa-external-link"></i> Enlaces</h3>
-                <p><a href="{{ site.baseurl }}/terapia.html"> Terapia</a></p>
-                <p><a href="{{ site.baseurl }}/coaching.html"> Coaching</a></p>
-                <p><a href="{{ site.baseurl }}/contact.html"> Contacto</a></p>
-                <p><a href="{{ site.baseurl }}/about.html"> Sobre mi</a></p>
+            <div>
+                <h3>Enlaces</h3>
+                <p>
+                    <a href="{{ '/terapia/' | relative_url }}">Terapia</a><br>
+                    <a href="{{ '/coaching/' | relative_url }}">Coaching</a><br>
+                    <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a><br>
+                    <a href="{{ '/contacto/' | relative_url }}">Contacto</a><br>
+                    <a href="{{ '/politica-de-cookies/' | relative_url }}">Política de cookies</a><br>
+                    <a href="{{ '/politica-de-privacidad/' | relative_url }}">Política de privacidad</a>
+                </p>
             </div>
-            <div class="col-md-4">
-                <h3><i class="fa fa-heart"></i> Sígueme</h3>
-                <div id="social-icons">
-                    {% if site.facebook_link %}
-                    <a href="{{ site.facebook_link }}" class="btn-group facebook">
-                        <i class="fa fa-facebook"></i>
+            <div>
+                <h3>Sígueme</h3>
+                <div class="social-links">
+                    <a href="{{ site.facebook_link }}" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9v-9h3l.5-3.5h-3.5V7.2c0-1 .3-1.7 1.8-1.7H17V2.4c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.6H7v3.5h3v9h3.5z"/></svg>
                     </a>
-                    {% endif %}
-                    {% if site.instagram_link %}
-                    <a href="{{ site.instagram_link }}" class="btn-group instagram">
-                        <i class="fa fa-instagram"></i>
+                    <a href="{{ site.instagram_link }}" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 2.9a6.9 6.9 0 1 0 0 13.8 6.9 6.9 0 0 0 0-13.8zm0 11.4a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm7.2-11.7a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg>
                     </a>
-                    {% endif %}
-                    {% if site.whatsapp_link %}
-                    <a href="{{ site.whatsapp_link }}" class="btn-group whatsapp">
-                        <i class="fa fa-whatsapp"></i>
+                    <a href="{{ site.whatsapp_link }}" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-2.9-.9-4.9-3-6.2-5.5-.4-.8-.7-1.8-.2-2.6.2-.4.6-.6 1-.6h.7c.2 0 .5 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.6 2.1 3 2.7.3.1.5.1.7-.1l.8-.9c.2-.2.4-.3.7-.2l2 1c.3.1.5.2.5.4.1.1.1.6-.3 1z"/></svg>
                     </a>
-                    {% endif %}
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copyright text center">
-        <p>&copy; Copyright {{ site.time | date: '%Y' }} <a href="{{ site.baseurl }}/index.html">Maribel Noguera</a>
+        <p class="footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.company_name }}</p>
     </div>
 </footer>
-<!-- End Footer -->

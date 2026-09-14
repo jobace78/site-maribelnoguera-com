@@ -128,9 +128,107 @@ set -e -o pipefail
 cd {{ config_root }} || exit 1
 
 if [ -f Gemfile ]; then
-    bundle exec jekyll build
+    bundle exec jekyll build --config _config.yml --destination _site
 else
     echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks."jekyll:build-staging"]
+alias = "jbs"
+description = "(bundle exec) jekyll build staging"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+cd {{ config_root }} || exit 1
+
+if [ -f Gemfile ]; then
+    bundle exec jekyll build --config _config_staging.yml --destination _site-staging
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks."jekyll:deploy"]
+alias = "jd"
+description = "(git) commit and push"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+cd {{ config_root }} || exit 1
+
+CURRENT_BRANCH="$(git branch --show-current 2> /dev/null || printf '%s' '')"
+LIVE_CLONE='{{ config_root }}'
+LIVE_URL="$(yq '.url' _config.yml)"
+readonly CURRENT_BRANCH LIVE_CLONE LIVE_URL
+
+if [ "${CURRENT_BRANCH}" = 'main' ]; then
+    if [ -d "${LIVE_CLONE}/.git" ]; then
+        bundle exec jekyll build --config _config.yml --destination _site
+        git -C "${LIVE_CLONE}" add --all
+        if git -C "${LIVE_CLONE}" diff --cached --quiet main; then
+            echo "===> nothing to deploy."
+        else
+            git -C "${LIVE_CLONE}" commit --message 'WIP' --message "v$(date +%Y%m)" 1> /dev/null
+            git -C "${LIVE_CLONE}" fetch origin --prune
+            git -C "${LIVE_CLONE}" push --set-upstream origin main
+            echo "===> published to '${LIVE_URL:?}'..."
+        fi
+    else
+        echo "'${LIVE_CLONE}' is NOT a git clone, exiting."
+        exit 1
+    fi
+else
+    echo "NOT on 'main' branch (current branch: '${CURRENT_BRANCH}'), exiting."
+    exit 1
+fi
+"""
+[tasks."jekyll:deploy-staging"]
+alias = "jds"
+description = "(git) commit and push staging"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+cd {{ config_root }} || exit 1
+
+CURRENT_BRANCH="$(git branch --show-current 2> /dev/null || printf '%s' '')"
+STAGING_CLONE='../{{ config_root | basename }}-staging'
+STAGING_URL="$(yq '.url' _config_staging.yml)$(yq '.baseurl' _config_staging.yml)"
+readonly CURRENT_BRANCH STAGING_CLONE STAGING_URL
+
+if [[ "${CURRENT_BRANCH}" == feature/* ]]; then
+    if [ -d "${STAGING_CLONE}/.git" ]; then
+        bundle exec jekyll build --config _config_staging.yml --destination _site-staging
+        touch _site-staging/.nojekyll
+        rsync --archive --delete \
+            --exclude '.editorconfig' \
+            --exclude '.git/' \
+            --exclude '.gitignore' \
+            --exclude '.idea/' \
+            --exclude '.workspaces.conf' \
+            _site-staging/ "${STAGING_CLONE}/"
+        git -C "${STAGING_CLONE}" add --all
+        if git -C "${STAGING_CLONE}" diff --cached --quiet main; then
+            echo "===> nothing to deploy."
+        else
+            git -C "${STAGING_CLONE}" reset --quiet --soft "$(git -C "${STAGING_CLONE}" rev-list --max-parents=0 main | tail -1)"
+            git -C "${STAGING_CLONE}" commit --message 'WIP' --message "v$(date +%Y%m)" 1> /dev/null
+            git -C "${STAGING_CLONE}" fetch origin --prune
+            git -C "${STAGING_CLONE}" push --force --set-upstream origin main
+            echo "===> published to '${STAGING_URL:?}'..."
+        fi
+    else
+        echo "'${STAGING_CLONE}' is NOT a git clone, exiting."
+        exit 1
+    fi
+else
+    echo "NOT on 'feature/*' branch (current branch: '${CURRENT_BRANCH}'), exiting."
     exit 1
 fi
 """
@@ -145,7 +243,24 @@ set -e -o pipefail
 cd {{ config_root }} || exit 1
 
 if [ -f Gemfile ]; then
-    bundle exec jekyll serve
+    bundle exec jekyll serve --config _config.yml --destination _site
+else
+    echo "'Gemfile' was NOT found, exiting."
+    exit 1
+fi
+"""
+[tasks."jekyll:serve-staging"]
+alias = "jss"
+description = "(bundle exec) jekyll serve staging"
+run = """
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+cd {{ config_root }} || exit 1
+
+if [ -f Gemfile ]; then
+    bundle exec jekyll serve --config _config_staging.yml --destination _site-staging
 else
     echo "'Gemfile' was NOT found, exiting."
     exit 1
@@ -189,3 +304,4 @@ fi
 """
 [tools]
 ruby = "2.7"
+yq = "4"

@@ -1,4 +1,4 @@
-baseurl: ""
+baseurl: /site-maribelnoguera-com-staging
 collections:
   services:
     output: true
@@ -23,6 +23,7 @@ description: >-
   personalizado hacia tu bienestar emocional, presencial y online.
 email: info@maribelnoguera.com
 exclude:
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - mise.toml
@@ -35,7 +36,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-staging: false
+staging: true
 title: Maribel Noguera
-url: https://www.maribelnoguera.com
+url: https://jobace78.github.io
 whatsapp_link: https://wa.me/34696897730

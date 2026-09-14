@@ -1,0 +1,17 @@
+---
+layout: base
+---
+<div class="container page-header">
+    <h1>{{ page.heading }}</h1>
+    <p class="prose">{{ page.intro }}</p>
+</div>
+<div class="container section" style="padding-top: 1.5rem;">
+    <h2 class="visually-hidden">Servicios</h2>
+    <div class="services-grid">
+        {% assign items = site.services | where: 'category', page.category | sort: 'order' %}
+        {% for service in items %}
+        {% include service-card.html service=service %}
+        {% endfor %}
+    </div>
+    {{ content }}
+</div>
