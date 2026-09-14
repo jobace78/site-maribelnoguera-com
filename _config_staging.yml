@@ -17,16 +17,6 @@ defaults:
       lang: es
       locale: es_ES
   - scope:
-      path: "es"
-    values:
-      lang: es
-      locale: es_ES
-  - scope:
-      path: "_services/es"
-    values:
-      lang: es
-      locale: es_ES
-  - scope:
       path: "ca"
     values:
       lang: ca

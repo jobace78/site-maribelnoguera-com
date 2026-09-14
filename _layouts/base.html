@@ -1,5 +1,5 @@
 {%- assign lang = page.lang | default: site.lang -%}
-{%- assign t = site.data[lang] -%}
+{%- assign t = site.data[lang].strings | default: site.data.strings -%}
 {%- if lang == 'ca' -%}{%- assign lang_prefix = '/ca' -%}{%- else -%}{%- assign lang_prefix = '' -%}{%- endif -%}
 {%- if page.translation_key -%}
 {%- assign i18n_pool = site.pages | concat: site.services | where: 'translation_key', page.translation_key -%}

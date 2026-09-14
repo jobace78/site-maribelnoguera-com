@@ -2,7 +2,7 @@
 layout: base
 ---
 {% assign lang = page.lang | default: site.lang %}
-{% assign t = site.data[lang] %}
+{% assign t = site.data[lang].strings | default: site.data.strings %}
 {% if lang == 'ca' %}{% assign lang_prefix = '/ca' %}{% else %}{% assign lang_prefix = '' %}{% endif %}
 {% assign category_url = lang_prefix | append: '/' | append: page.category | append: '/' %}
 {% assign category_label = t.categories[page.category] %}
