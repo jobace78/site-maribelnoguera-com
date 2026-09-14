@@ -1,5 +1,5 @@
 {%- assign card_lang = include.service.lang | default: site.lang -%}
-{%- assign ct = site.data.strings[card_lang] -%}
+{%- assign ct = site.data[card_lang] -%}
 <article class="service-card">
     <picture>
         <source srcset="{{ '/assets/img/services/' | append: include.service.slug_img | append: '-800.webp' | relative_url }}"
