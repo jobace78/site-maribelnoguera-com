@@ -7,12 +7,21 @@ permalink: /404.html
 
 <div class="container error-page">
     <h1>404</h1>
-    <p><strong>Página no encontrada</strong></p>
-    <p>Lo sentimos, no se pudo encontrar la página solicitada.</p>
-    <p><a class="btn btn-accent" href="{{ '/' | relative_url }}">Volver al inicio</a></p>
-    <div lang="ca">
+    <div lang="es" id="error-es">
+        <p><strong>Página no encontrada</strong></p>
+        <p>Lo sentimos, no se pudo encontrar la página solicitada.</p>
+        <p><a class="btn btn-accent" href="{{ '/' | relative_url }}">Volver al inicio</a></p>
+    </div>
+    <div lang="ca" id="error-ca">
         <p><strong>Pàgina no trobada</strong></p>
         <p>Ho sentim, no s'ha pogut trobar la pàgina sol·licitada.</p>
         <p><a class="btn btn-accent" href="{{ '/ca/' | relative_url }}">Torna a l'inici</a></p>
     </div>
 </div>
+<script>
+    (function () {
+        var catalan = location.pathname.indexOf('{{ site.baseurl }}/ca/') === 0;
+        document.documentElement.lang = catalan ? 'ca' : 'es';
+        document.getElementById(catalan ? 'error-es' : 'error-ca').hidden = true;
+    })();
+</script>
