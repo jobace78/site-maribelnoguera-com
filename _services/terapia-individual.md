@@ -12,6 +12,7 @@ image_alt: Sesión de terapia individual en un espacio tranquilo
 image: /assets/img/services/terapia-individual-800.jpg
 image_height: 450
 order: 1
+translation_key: svc-terapia-individual
 permalink: /terapia/terapia-individual/
 redirect_from: [/terapia/terapia-individual.html]
 ---

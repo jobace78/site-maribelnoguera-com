@@ -8,7 +8,8 @@ layout: base
 <div class="container section" style="padding-top: 1.5rem;">
     <h2 class="visually-hidden">Servicios</h2>
     <div class="services-grid">
-        {% assign items = site.services | where: 'category', page.category | sort: 'order' %}
+        {% assign lang = page.lang | default: site.lang %}
+        {% assign items = site.services | where: 'lang', lang | where: 'category', page.category | sort: 'order' %}
         {% for service in items %}
         {% include service-card.html service=service %}
         {% endfor %}

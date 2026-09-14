@@ -23,7 +23,7 @@ layout: base
     <div class="prose">
         {{ content }}
     </div>
-    {% assign siblings = site.services | where: 'category', page.category | sort: 'order' %}
+    {% assign siblings = site.services | where: 'lang', page.lang | where: 'category', page.category | sort: 'order' %}
     {% for sibling in siblings %}
     {% if sibling.url != page.url %}
     <aside class="related-service">

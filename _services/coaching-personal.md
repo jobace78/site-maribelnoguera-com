@@ -12,6 +12,7 @@ image_alt: Sesión de coaching personal
 image: /assets/img/services/coaching-personal-800.jpg
 image_height: 542
 order: 1
+translation_key: svc-coaching-personal
 permalink: /coaching/coaching-personal/
 redirect_from: [/coaching/coaching-personal.html]
 ---

@@ -12,6 +12,7 @@ image_alt: Estudiante concentrado durante una sesión de coaching
 image: /assets/img/services/coaching-para-estudiantes-800.jpg
 image_height: 450
 order: 2
+translation_key: svc-coaching-para-estudiantes
 permalink: /coaching/coaching-para-estudiantes/
 redirect_from: [/coaching/coaching-para-estudiantes.html]
 ---

@@ -1,5 +1,6 @@
 ---
 layout: base
+translation_key: home
 title: Terapia Gestalt y Coaching en Mallorca
 description: >-
   Terapia Gestalt y Coaching en Mallorca. Acompañamiento
@@ -78,8 +79,8 @@ image: /assets/img/hero-1600.jpg
     <div class="container">
         <h2 class="section-title">¿En qué puedo acompañarte?</h2>
         <div class="services-grid">
-            {% assign terapia_items = site.services | where: 'category', 'terapia' | sort: 'order' %}
-            {% assign coaching_items = site.services | where: 'category', 'coaching' | sort: 'order' %}
+            {% assign terapia_items = site.services | where: 'lang', 'es' | where: 'category', 'terapia' | sort: 'order' %}
+            {% assign coaching_items = site.services | where: 'lang', 'es' | where: 'category', 'coaching' | sort: 'order' %}
             {% assign items = terapia_items | concat: coaching_items %}
             {% for service in items %}
             {% include service-card.html service=service %}

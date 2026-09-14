@@ -12,6 +12,7 @@ image_alt: Acompañamiento emocional durante un proceso de duelo
 image: /assets/img/services/acompanamiento-duelos-800.jpg
 image_height: 450
 order: 2
+translation_key: svc-acompanamiento-duelos
 permalink: /terapia/acompanamiento-duelos/
 redirect_from: [/terapia/acompanamiento-duelos.html]
 ---
