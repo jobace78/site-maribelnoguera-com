@@ -1,8 +1,8 @@
 <section class="contact-banner">
     <div class="container">
-        <h2>¿Hablamos?</h2>
-        <p>Pide una primera cita gratuita y sin compromiso, presencial en Binissalem u online.</p>
-        <a class="btn btn-accent" href="{{ site.whatsapp_link }}">Escríbeme por WhatsApp</a>
-        <a class="btn btn-outline" href="{{ '/contacto/' | relative_url }}">Formulario de contacto</a>
+        <h2>{{ t.contact_banner.heading }}</h2>
+        <p>{{ t.contact_banner.text }}</p>
+        <a class="btn btn-accent" href="{{ site.whatsapp_link }}">{{ t.contact_banner.whatsapp_cta }}</a>
+        <a class="btn btn-outline" href="{{ lang_prefix | append: '/contacto/' | relative_url }}">{{ t.contact_banner.form_cta }}</a>
     </div>
 </section>

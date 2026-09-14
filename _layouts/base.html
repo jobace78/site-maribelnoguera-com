@@ -1,8 +1,16 @@
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign t = site.data.strings[lang] -%}
+{%- if lang == 'ca' -%}{%- assign lang_prefix = '/ca' -%}{%- else -%}{%- assign lang_prefix = '' -%}{%- endif -%}
+{%- if page.translation_key -%}
+{%- assign i18n_pool = site.pages | concat: site.services | where: 'translation_key', page.translation_key -%}
+{%- assign page_es = i18n_pool | where: 'lang', 'es' | first -%}
+{%- assign page_ca = i18n_pool | where: 'lang', 'ca' | first -%}
+{%- endif -%}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}">
+<html lang="{{ lang }}">
 {% include head.html %}
 <body>
-<a class="skip-link" href="#main">Saltar al contenido</a>
+<a class="skip-link" href="#main">{{ t.skip_link }}</a>
 {% include header.html %}
 <main id="main">
     {{ content }}

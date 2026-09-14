@@ -1,17 +1,20 @@
 ---
 layout: base
 ---
-{% assign category_url = '/' | append: page.category | append: '/' %}
-{% assign category_label = page.category | capitalize %}
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.strings[lang] %}
+{% if lang == 'ca' %}{% assign lang_prefix = '/ca' %}{% else %}{% assign lang_prefix = '' %}{% endif %}
+{% assign category_url = lang_prefix | append: '/' | append: page.category | append: '/' %}
+{% assign category_label = t.categories[page.category] %}
 <div class="container page-header">
-    <nav aria-label="Miga de pan">
+    <nav aria-label="{{ t.breadcrumb.aria_label }}">
         <ol class="breadcrumb">
-            <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
+            <li><a href="{{ lang_prefix | append: '/' | relative_url }}">{{ t.breadcrumb.home }}</a></li>
             <li><a href="{{ category_url | relative_url }}">{{ category_label }}</a></li>
             <li aria-current="page">{{ page.heading }}</li>
         </ol>
     </nav>
-    <h1>{{ page.heading }} en Mallorca</h1>
+    <h1>{{ page.heading }} {{ t.in_mallorca }}</h1>
     <picture>
         <source srcset="{{ '/assets/img/services/' | append: page.slug_img | append: '-800.webp' | relative_url }}"
                 type="image/webp">
@@ -27,7 +30,7 @@ layout: base
     {% for sibling in siblings %}
     {% if sibling.url != page.url %}
     <aside class="related-service">
-        <h2>También te puede interesar</h2>
+        <h2>{{ t.related_heading }}</h2>
         <p><a href="{{ sibling.url | relative_url }}">{{ sibling.heading }}</a> — {{ sibling.description }}</p>
     </aside>
     {% endif %}
@@ -49,7 +52,7 @@ layout: base
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 1, "name": {{ t.breadcrumb.home | jsonify }}, "item": "{{ site.url }}{{ lang_prefix }}/" },
         { "@type": "ListItem", "position": 2, "name": "{{ category_label }}", "item": "{{ category_url | absolute_url }}" },
         { "@type": "ListItem", "position": 3, "name": "{{ page.heading }}" }
     ]
