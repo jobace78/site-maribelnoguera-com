@@ -1,4 +1,4 @@
-{% if site.google_analytics_id %}
+{% if site.google_analytics_id or site.staging %}
 <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="{{ t.cookie_banner.aria_label }}" hidden>
     <p>{{ t.cookie_banner.text }}
         <a href="{{ lang_prefix | append: '/politica-de-cookies/' | relative_url }}">{{ t.cookie_banner.more_info }}</a>.</p>
@@ -12,6 +12,7 @@
         var banner = document.getElementById('cookie-banner');
 
         function loadAnalytics() {
+            {% if site.google_analytics_id %}
             var s = document.createElement('script');
             s.async = true;
             s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}';
@@ -24,6 +25,7 @@
 
             gtag('js', new Date());
             gtag('config', '{{ site.google_analytics_id }}');
+            {% endif %}
         }
 
         var consent = localStorage.getItem('cookie-consent');
