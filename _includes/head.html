@@ -2,6 +2,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% seo %}
+    {% if page_es and page_ca %}
+    <link rel="alternate" hreflang="es" href="{{ page_es.url | absolute_url }}">
+    <link rel="alternate" hreflang="ca" href="{{ page_ca.url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page_es.url | absolute_url }}">
+    {% endif %}
     {% if site.staging %}
     <meta name="robots" content="noindex, nofollow">
     {% endif %}
