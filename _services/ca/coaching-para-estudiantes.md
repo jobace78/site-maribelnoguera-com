@@ -33,4 +33,4 @@ Si et sents identificat/da amb alguna d'aquestes preguntes, et puc ajudar!
 
 El mètode de **Coaching WingWave** construeix els fonaments per a l'èxit: un increment de la creativitat, una autopercepció més positiva i un augment del carisma mitjançant l'*enfortiment del jo* i una millor visualització de metes.
 
-El **Coaching WingWave** aporta la preparació mental per a un màxim rendiment. Assumptes com l'**ansietat** davant els exàmens i la **por escènica** es poden tractar fàcilment i convertir-se en absoluta confiança en un mateix.
+El **Coaching WingWave** aporta la preparació mental per a un màxim rendiment. Qüestions com l'**ansietat** davant els exàmens i la **por escènica** es poden tractar fàcilment i convertir-se en absoluta confiança en un mateix.

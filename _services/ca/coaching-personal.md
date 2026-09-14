@@ -22,7 +22,7 @@ permalink: /ca/coaching/coaching-personal/
 - Sents que necessites un canvi en la teva vida, però les teves pors et paralitzen i t'impedeixen fer el pas, i necessites ajuda per fer-lo.
 - La teva **autoestima** s'està deteriorant, sents que la teva seguretat i la teva confiança pengen d'un fil i vols recuperar-les i millorar la imatge que tens de tu mateix/a.
 - Tens una meta o un objectiu que vas posposant i vols posar-te mans a l'obra per aconseguir-lo, però veus que tot sol/a no pots.
-- Et trobes dins una voràgine d'emocions on passes en un instant de l'alegria a la tristesa, de la desconfiança a la por, de la felicitat a la ràbia… i no saps com gestionar-les.
+- Et trobes dins d'una voràgine d'emocions on passes en un instant de l'alegria a la tristesa, de la desconfiança a la por, de la felicitat a la ràbia… i no saps com gestionar-les.
 
 Ets al lloc correcte! T'animo a provar unes sessions de **coaching** amb mi!
 

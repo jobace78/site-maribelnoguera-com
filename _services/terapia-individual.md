@@ -40,7 +40,7 @@ Si te sientes identificado/a con alguna de las preguntas, déjame decirte que ¡
 - Aprender a decir que NO cuando ves que algo no va contigo y/o con tus principios.
 - Priorizar qué es lo que necesitas en cada preciso momento de tu vida.
 
-Y sobre todo, a vivir la vida al máximo, disfrutando de cada momento que nos brinda, porque cada momento es único e irrepetible y, como bien dicen:
+Y sobre todo, vivir la vida al máximo, disfrutando de cada momento que nos brinda, porque cada momento es único e irrepetible y, como bien dicen:
 
 > Vida solo hay una y aquí estamos de paso, nunca sabemos en qué momento llegará nuestro final.
 

@@ -20,16 +20,16 @@ permalink: /ca/terapia/terapia-individual/
 
 - T'has vist en algun moment de la teva vida preguntant-te si estàs vivint la vida que vols o la que els altres desitgen?
 - Et sents perdut/da perquè no saps com fer front a segons quines situacions de la teva vida?
-- Vius amb frustració no saber dir que NO! al que realment no va amb tu?
+- Vius amb frustració el fet de no saber dir que NO a allò que realment no va amb tu?
 - Vius en un etern mar de dubtes i pors que t'impedeixen tirar endavant amb la vida que desitges?
 
-Podria seguir eternament llançant preguntes, però les que a mi realment em neix compartir amb tu, perquè en el seu moment m'han ajudat i ho continuen fent avui dia, són:
+Podria continuar eternament llançant preguntes, però les que realment tinc ganes de compartir amb tu, perquè en el seu moment m'han ajudat i ho continuen fent avui dia, són:
 
 - Com seria arribar a la vellesa veient que no has estat tu mateix/a i que has estat vivint una vida que no és la teva sinó la d'altres?
 - Com seria veure tot el que has deixat de viure a causa de les teves pors?
 - Com seria veure que sempre has prioritzat els altres abans que tu mateix/a?
 
-Si et sents identificat/da amb alguna de les preguntes, deixa'm dir-te que estàs de sort! Encara ets a temps de gaudir la vida com et mereixes i de ser tu mateix/a!
+Si et sents identificat/da amb alguna de les preguntes, deixa'm dir-te que estàs de sort! Encara ets a temps de gaudir de la vida com et mereixes i de ser tu mateix/a!
 
 ## Què t'ofereixo
 
@@ -37,9 +37,9 @@ Si et sents identificat/da amb alguna de les preguntes, deixa'm dir-te que està
 - Veure per tu mateix/a què és el que vols canviar en la teva vida i què no.
 - Valorar-te i estimar-te tal com ets i com et mereixes.
 - Aprendre a dir que NO quan veus que alguna cosa no va amb tu i/o amb els teus principis.
-- Prioritzar què és el que necessites en cada precís moment de la teva vida.
+- Prioritzar què és el que necessites en cada moment de la teva vida.
 
-I sobretot, a viure la vida al màxim, gaudint de cada moment que ens brinda, perquè cada moment és únic i irrepetible i, com bé diuen:
+I sobretot, viure la vida al màxim, gaudint de cada moment que ens ofereix, perquè cada moment és únic i irrepetible i, com bé diuen:
 
 > Vida només n'hi ha una i aquí hi som de pas, mai no sabem en quin moment arribarà el nostre final.
 
