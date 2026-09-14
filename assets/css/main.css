@@ -263,6 +263,25 @@ img {
     color: var(--color-white);
 }
 
+/* Language switcher */
+.nav-list a.lang-switch {
+    align-items: center;
+    border: 2px solid var(--color-cta);
+    border-radius: 50%;
+    color: var(--color-cta);
+    display: inline-flex;
+    font-size: 0.7rem;
+    font-weight: 600;
+    height: 2.1rem;
+    justify-content: center;
+    width: 2.1rem;
+}
+
+.nav-list a.lang-switch:hover {
+    background: var(--color-cta);
+    color: var(--color-cta-text);
+}
+
 /* Hero (home) */
 .hero {
     height: min(70vh, 34rem);
