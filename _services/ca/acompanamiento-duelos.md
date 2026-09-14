@@ -16,7 +16,7 @@ order: 2
 permalink: /ca/terapia/acompanamiento-duelos/
 ---
 
-## Què és el dol
+## Què és el dol?
 
 Quan parlem de **dols**, normalment es tendeix a associar-los amb la mort d'algú estimat. Des del meu punt de vista, el **dol** és un procés natural de la persona, que es produeix davant una pèrdua significativa en la seva vida, sigui voluntària o involuntària.
 
