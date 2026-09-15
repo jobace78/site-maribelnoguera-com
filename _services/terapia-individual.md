@@ -12,6 +12,7 @@ image_alt: Sesión de terapia individual en un espacio tranquilo
 image: /assets/img/services/terapia-individual-800.jpg
 image_height: 450
 order: 1
+translation_key: svc-terapia-individual
 permalink: /terapia/terapia-individual/
 redirect_from: [/terapia/terapia-individual.html]
 ---
@@ -39,7 +40,7 @@ Si te sientes identificado/a con alguna de las preguntas, déjame decirte que ¡
 - Aprender a decir que NO cuando ves que algo no va contigo y/o con tus principios.
 - Priorizar qué es lo que necesitas en cada preciso momento de tu vida.
 
-Y sobre todo, a vivir la vida al máximo, disfrutando de cada momento que nos brinda, porque cada momento es único e irrepetible y, como bien dicen:
+Y sobre todo, vivir la vida al máximo, disfrutando de cada momento que nos brinda, porque cada momento es único e irrepetible y, como bien dicen:
 
 > Vida solo hay una y aquí estamos de paso, nunca sabemos en qué momento llegará nuestro final.
 

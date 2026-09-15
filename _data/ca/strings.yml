@@ -1,0 +1,40 @@
+breadcrumb:
+  aria_label: Ruta de navegació
+  home: Inici
+business_description: >-
+  Teràpia Gestalt i Coaching a Mallorca. Acompanyament personalitzat
+  cap al teu benestar emocional, presencial i en línia.
+categories:
+  coaching: Coaching
+  terapia: Teràpia
+contact_banner:
+  form_cta: Formulari de contacte
+  heading: En parlem?
+  text: Demana una primera sessió gratuïta i sense compromís, presencial a Binissalem o en línia.
+  whatsapp_cta: Escriu-me per WhatsApp
+cookie_banner:
+  accept: Accepta
+  aria_label: Avís de cookies
+  more_info: Més informació
+  reject: Rebutja
+  text: Utilitzo cookies d'anàlisi (Google Analytics) només per saber quines pàgines interessen més. Si les rebutges, tot funciona igual.
+footer:
+  contact_heading: Contacte
+  cookies_policy: Política de cookies
+  follow_heading: Segueix-me
+  links_heading: Enllaços
+  privacy_policy: Política de privacitat
+in_mallorca: a Mallorca
+nav:
+  aria_label: Principal
+  coaching: Coaching
+  contacto: Contacte
+  home: Inici
+  menu_toggle: Obre el menú
+  sobre_mi: Sobre mi
+  switch_label: Castellano
+  terapia: Teràpia
+read_more: Saber-ne més →
+related_heading: També et pot interessar
+services_heading: Serveis
+skip_link: Salta al contingut

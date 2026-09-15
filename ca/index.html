@@ -1,13 +1,12 @@
 ---
 layout: base
-permalink: /
 translation_key: home
-title: Terapia Gestalt y Coaching en Mallorca
+title: Teràpia Gestalt i Coaching a Mallorca
 description: >-
-  Terapia Gestalt y Coaching en Mallorca. Acompañamiento
-  personalizado hacia tu bienestar emocional, presencial y online. Primera
-  sesión gratuita.
+  Teràpia Gestalt i Coaching a Mallorca. Acompanyament personalitzat
+  cap al teu benestar emocional, presencial i en línia. Primera sessió gratuïta.
 image: /assets/img/hero-1600.jpg
+permalink: /ca/
 ---
 
 <section class="hero">
@@ -17,7 +16,7 @@ image: /assets/img/hero-1600.jpg
                     type="image/webp">
             <source srcset="{{ '/assets/img/hero-800.webp' | relative_url }}" type="image/webp">
             <img src="{{ '/assets/img/hero-1600.jpg' | relative_url }}"
-                 alt="Paisaje sereno de Mallorca" width="1600" height="1048" fetchpriority="high">
+                 alt="Paisatge serè de Mallorca" width="1600" height="1048" fetchpriority="high">
         </picture>
     </div>
     <div class="hero-slide" aria-hidden="true">
@@ -26,17 +25,17 @@ image: /assets/img/hero-1600.jpg
                     type="image/webp">
             <source srcset="{{ '/assets/img/hero-2-800.webp' | relative_url }}" type="image/webp">
             <img src="{{ '/assets/img/hero-2-1600.jpg' | relative_url }}"
-                 alt="La consulta, un espacio tranquilo para las sesiones" width="1600" height="1048"
+                 alt="La consulta, un espai tranquil per a les sessions" width="1600" height="1048"
                  loading="lazy">
         </picture>
     </div>
     <div class="hero-inner">
-        <h1>Terapia Gestalt y Coaching en Mallorca — presencial y online</h1>
-        <a class="btn btn-accent" href="{{ site.whatsapp_link }}">Reserva una primera sesión gratuita</a>
+        <h1>Teràpia Gestalt i Coaching a Mallorca — presencial i en línia</h1>
+        <a class="btn btn-accent" href="{{ site.whatsapp_link }}">Reserva una primera sessió gratuïta</a>
     </div>
     <div class="hero-dots">
-        <button class="hero-dot is-active" type="button" aria-label="Ver foto 1"></button>
-        <button class="hero-dot" type="button" aria-label="Ver foto 2"></button>
+        <button class="hero-dot is-active" type="button" aria-label="Veure foto 1"></button>
+        <button class="hero-dot" type="button" aria-label="Veure foto 2"></button>
     </div>
 </section>
 <script>
@@ -78,10 +77,10 @@ image: /assets/img/hero-1600.jpg
 
 <section class="section">
     <div class="container">
-        <h2 class="section-title">¿En qué puedo acompañarte?</h2>
+        <h2 class="section-title">En què et puc acompanyar?</h2>
         <div class="services-grid">
-            {% assign terapia_items = site.services | where: 'lang', 'es' | where: 'category', 'terapia' | sort: 'order' %}
-            {% assign coaching_items = site.services | where: 'lang', 'es' | where: 'category', 'coaching' | sort: 'order' %}
+            {% assign terapia_items = site.services | where: 'lang', 'ca' | where: 'category', 'terapia' | sort: 'order' %}
+            {% assign coaching_items = site.services | where: 'lang', 'ca' | where: 'category', 'coaching' | sort: 'order' %}
             {% assign items = terapia_items | concat: coaching_items %}
             {% for service in items %}
             {% include service-card.html service=service %}
@@ -96,14 +95,14 @@ image: /assets/img/hero-1600.jpg
             <picture>
                 <source srcset="{{ '/assets/img/maribel-320.webp' | relative_url }}" type="image/webp">
                 <img class="intro-photo" src="{{ '/assets/img/maribel-320.jpg' | relative_url }}"
-                     alt="Maribel Noguera, terapeuta Gestalt y coach" width="320" height="320" loading="lazy">
+                     alt="Maribel Noguera, terapeuta Gestalt i coach" width="320" height="320" loading="lazy">
             </picture>
             <div>
-                <h2>Soy Maribel</h2>
-                <p>Terapeuta Gestalt y coach WingWave certificada. Me apasiona acompañar y brindar ayuda a las
-                    personas que en un momento u otro de su vida la necesitan. Desde mis conocimientos y mi
-                    acompañamiento te invito a navegar hacia tu propio autodescubrimiento.</p>
-                <a href="{{ '/sobre-mi/' | relative_url }}">Conoce mi historia →</a>
+                <h2>Soc na Maribel</h2>
+                <p>Terapeuta Gestalt i coach WingWave certificada. M'apassiona acompanyar i oferir ajuda a les
+                    persones que en un moment o altre de la seva vida la necessiten. Des dels meus coneixements
+                    i el meu acompanyament, et convido a navegar cap al teu propi autodescobriment.</p>
+                <a href="{{ '/ca/sobre-mi/' | relative_url }}">Coneix la meva història →</a>
             </div>
         </div>
     </div>
@@ -111,6 +110,6 @@ image: /assets/img/hero-1600.jpg
 
 <section class="quote-band">
     <div class="container">
-        <blockquote>«Cada momento es único e irrepetible»</blockquote>
+        <blockquote>«Cada moment és únic i irrepetible»</blockquote>
     </div>
 </section>

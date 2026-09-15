@@ -1,21 +1,26 @@
 <header class="site-header">
     <div class="container">
-        <nav class="site-nav" aria-label="Principal">
-            <a class="site-brand" href="{{ '/' | relative_url }}">Maribel Noguera</a>
+        <nav class="site-nav" aria-label="{{ t.nav.aria_label }}">
+            <a class="site-brand" href="{{ lang_prefix | append: '/' | relative_url }}">Maribel Noguera</a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list"
-                    aria-label="Abrir menú">☰</button>
+                    aria-label="{{ t.nav.menu_toggle }}">☰</button>
             <ul class="nav-list" id="nav-list">
-                <li><a href="{{ '/' | relative_url }}"
-                       {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>Inicio</a></li>
-                <li><a href="{{ '/terapia/' | relative_url }}"
-                       {% if page.url contains '/terapia' %}class="active"{% endif %}>Terapia</a></li>
-                <li><a href="{{ '/coaching/' | relative_url }}"
-                       {% if page.url contains '/coaching' %}class="active"{% endif %}>Coaching</a></li>
-                <li><a href="{{ '/sobre-mi/' | relative_url }}"
-                       {% if page.url contains '/sobre-mi' %}class="active"{% endif %}>Sobre mí</a></li>
-                <li><a href="{{ '/contacto/' | relative_url }}"
-                       {% if page.url contains '/contacto' %}class="active"{% endif %}>Contacto</a></li>
+                {% assign home_path = lang_prefix | append: '/' %}
+                <li><a href="{{ home_path | relative_url }}"
+                       {% if page.url == home_path %}class="active" aria-current="page"{% endif %}>{{ t.nav.home }}</a></li>
+                <li><a href="{{ lang_prefix | append: '/terapia/' | relative_url }}"
+                       {% if page.url contains '/terapia' %}class="active"{% endif %}>{{ t.nav.terapia }}</a></li>
+                <li><a href="{{ lang_prefix | append: '/coaching/' | relative_url }}"
+                       {% if page.url contains '/coaching' %}class="active"{% endif %}>{{ t.nav.coaching }}</a></li>
+                <li><a href="{{ lang_prefix | append: '/sobre-mi/' | relative_url }}"
+                       {% if page.url contains '/sobre-mi' %}class="active"{% endif %}>{{ t.nav.sobre_mi }}</a></li>
+                <li><a href="{{ lang_prefix | append: '/contacto/' | relative_url }}"
+                       {% if page.url contains '/contacto' %}class="active"{% endif %}>{{ t.nav.contacto }}</a></li>
                 <li><a class="btn btn-whatsapp" href="{{ site.whatsapp_link }}">WhatsApp</a></li>
+                {% if lang == 'ca' %}{% assign switch_url = page_es.url | default: '/' %}{% assign switch_lang = 'es' %}
+                {% else %}{% assign switch_url = page_ca.url | default: '/ca/' %}{% assign switch_lang = 'ca' %}{% endif %}
+                <li><a class="lang-switch" href="{{ switch_url | relative_url }}" lang="{{ switch_lang }}"
+                       hreflang="{{ switch_lang }}">{{ t.nav.switch_label }}</a></li>
             </ul>
         </nav>
     </div>

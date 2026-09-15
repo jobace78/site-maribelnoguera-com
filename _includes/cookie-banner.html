@@ -1,11 +1,10 @@
-{% if site.google_analytics_id %}
-<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
-    <p>Utilizo cookies de análisis (Google Analytics) solo para saber qué páginas interesan más.
-        Si las rechazas, todo funciona igual.
-        <a href="{{ '/politica-de-cookies/' | relative_url }}">Más información</a>.</p>
+{% if site.google_analytics_id or site.staging %}
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="{{ t.cookie_banner.aria_label }}" hidden>
+    <p>{{ t.cookie_banner.text }}
+        <a href="{{ lang_prefix | append: '/politica-de-cookies/' | relative_url }}">{{ t.cookie_banner.more_info }}</a>.</p>
     <div class="cookie-banner-actions">
-        <button class="btn btn-accent" type="button" data-consent="accepted">Aceptar</button>
-        <button class="btn btn-outline" type="button" data-consent="rejected">Rechazar</button>
+        <button class="btn btn-accent" type="button" data-consent="accepted">{{ t.cookie_banner.accept }}</button>
+        <button class="btn btn-outline" type="button" data-consent="rejected">{{ t.cookie_banner.reject }}</button>
     </div>
 </div>
 <script>
@@ -13,6 +12,7 @@
         var banner = document.getElementById('cookie-banner');
 
         function loadAnalytics() {
+            {% if site.google_analytics_id %}
             var s = document.createElement('script');
             s.async = true;
             s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}';
@@ -25,6 +25,7 @@
 
             gtag('js', new Date());
             gtag('config', '{{ site.google_analytics_id }}');
+            {% endif %}
         }
 
         var consent = localStorage.getItem('cookie-consent');

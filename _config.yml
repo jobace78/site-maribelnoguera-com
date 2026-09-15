@@ -13,6 +13,21 @@ company_phone: +34 696 897 730
 defaults:
   - scope:
       path: ""
+    values:
+      lang: es
+      locale: es_ES
+  - scope:
+      path: "ca"
+    values:
+      lang: ca
+      locale: ca_ES
+  - scope:
+      path: "_services/ca"
+    values:
+      lang: ca
+      locale: ca_ES
+  - scope:
+      path: ""
       type: services
     values:
       layout: service

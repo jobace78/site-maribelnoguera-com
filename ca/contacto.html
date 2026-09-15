@@ -1,0 +1,53 @@
+---
+layout: page
+title: Contacte — terapeuta Gestalt a Mallorca
+heading: Contacte
+description: >-
+  Contacta amb Maribel Noguera: Teràpia Gestalt i Coaching a Mallorca.
+  Primera sessió gratuïta, sessions presencials i en línia. WhatsApp o formulari.
+translation_key: contacto
+permalink: /ca/contacto/
+---
+
+<div class="contact-grid">
+    <div>
+        <p>
+            {{ site.company_name }}<br>
+            {{ site.company_address }}<br>
+            <a href="tel:{{ site.company_phone | remove: ' ' }}">{{ site.company_phone }}</a><br>
+            <a href="mailto:{{ site.company_email }}">{{ site.company_email }}</a>
+        </p>
+        <p><a class="btn btn-accent" href="{{ site.whatsapp_link }}">Escriu-me per WhatsApp</a></p>
+        <p><em>Les <strong>sessions</strong> s'ofereixen tant de manera presencial com en línia. En la modalitat en
+            línia, la sessió s'ha de fer per videotrucada, ja que és important el contacte visual per analitzar el
+            llenguatge corporal, crear un clima adequat i un vincle entre <strong>terapeuta</strong> i
+            client.</em></p>
+        <p><em>Demana una primera <strong>sessió gratuïta</strong> i sense compromís!</em></p>
+        <p><em>Aquest formulari és completament confidencial i no queda registrat al teu mòbil ni en cap altre
+            dispositiu.</em></p>
+    </div>
+    <div>
+        <form action="{{ site.company_feedback_form }}" method="post">
+            <div class="form-group">
+                <label for="fullname">Nom *</label>
+                <input type="text" name="fullname" id="fullname" required autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Missatge *</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+            </div>
+            <p class="form-privacy-note">En enviar, acceptes que faci servir les teves dades només per
+                respondre't. Més informació a la <a href="{{ '/ca/politica-de-privacidad/' | relative_url }}">política
+                de privacitat</a>.</p>
+            <button class="btn btn-accent" type="submit">Envia</button>
+        </form>
+    </div>
+</div>
+<div class="contact-map section">
+    <iframe src="{{ site.company_address_google_map }}" title="Mapa de la consulta a Binissalem"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</div>

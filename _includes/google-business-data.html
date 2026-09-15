@@ -12,7 +12,7 @@
         "streetAddress": "Carrer des Pou Bo 10"
     },
     "areaServed": "Mallorca",
-    "description": {{ site.description | strip_newlines | strip | jsonify }},
+    "description": {{ t.business_description | jsonify }},
     "email": "{{ site.company_email }}",
     "geo": {
         "@type": "GeoCoordinates",

@@ -12,13 +12,14 @@ image_alt: Acompañamiento emocional durante un proceso de duelo
 image: /assets/img/services/acompanamiento-duelos-800.jpg
 image_height: 450
 order: 2
+translation_key: svc-acompanamiento-duelos
 permalink: /terapia/acompanamiento-duelos/
 redirect_from: [/terapia/acompanamiento-duelos.html]
 ---
 
-## Qué es el duelo
+## ¿Qué es el duelo?
 
-Cuando hablamos de **duelos**, normalmente se tiende a asociarlos con la muerte de algún ser querido. Desde mi punto de vista, el **duelo** es un proceso natural de la persona, que se produce ante una pérdida significativa en su vida, sea voluntaria o involuntariamente.
+Cuando hablamos de **duelos**, normalmente se tiende a asociarlos con la muerte de algún ser querido. Desde mi punto de vista, el **duelo** es un proceso natural de la persona, que se produce ante una pérdida significativa en su vida, sea voluntaria o involuntaria.
 
 ## Algunos ejemplos para verlo más claro
 

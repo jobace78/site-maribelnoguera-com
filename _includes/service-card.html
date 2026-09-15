@@ -1,3 +1,5 @@
+{%- assign card_lang = include.service.lang | default: site.lang -%}
+{%- assign ct = site.data[card_lang].strings | default: site.data.strings -%}
 <article class="service-card">
     <picture>
         <source srcset="{{ '/assets/img/services/' | append: include.service.slug_img | append: '-800.webp' | relative_url }}"
@@ -6,9 +8,9 @@
              alt="{{ include.service.image_alt }}" width="800" height="500" loading="lazy">
     </picture>
     <div>
-        <span class="card-tag">{{ include.service.category | capitalize }}</span>
+        <span class="card-tag">{{ ct.categories[include.service.category] }}</span>
         <h3>{{ include.service.heading }}</h3>
         <p>{{ include.service.excerpt_text }}</p>
-        <a href="{{ include.service.url | relative_url }}">Saber más →</a>
+        <a href="{{ include.service.url | relative_url }}">{{ ct.read_more }}</a>
     </div>
 </article>
