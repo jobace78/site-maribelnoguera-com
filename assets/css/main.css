@@ -265,16 +265,13 @@ img {
 
 /* Language switcher */
 .nav-list a.lang-switch {
-    align-items: center;
     border: 2px solid var(--color-cta);
-    border-radius: 50%;
+    border-radius: var(--radius-pill);
     color: var(--color-cta);
-    display: inline-flex;
-    font-size: 0.7rem;
+    display: inline-block;
+    font-size: 0.9rem;
     font-weight: 600;
-    height: 2.1rem;
-    justify-content: center;
-    width: 2.1rem;
+    padding: 0.4rem 1.1rem;
 }
 
 .nav-list a.lang-switch:hover {

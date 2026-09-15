@@ -20,7 +20,7 @@
                 {% if lang == 'ca' %}{% assign switch_url = page_es.url | default: '/' %}{% assign switch_lang = 'es' %}
                 {% else %}{% assign switch_url = page_ca.url | default: '/ca/' %}{% assign switch_lang = 'ca' %}{% endif %}
                 <li><a class="lang-switch" href="{{ switch_url | relative_url }}" lang="{{ switch_lang }}"
-                       hreflang="{{ switch_lang }}" aria-label="{{ t.nav.switch_label }}">{{ switch_lang | upcase }}</a></li>
+                       hreflang="{{ switch_lang }}">{{ t.nav.switch_label }}</a></li>
             </ul>
         </nav>
     </div>
