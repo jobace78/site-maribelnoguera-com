@@ -12,6 +12,10 @@ Thumbs.db
 
 ### DO NOT MODIFY ABOVE THIS LINE ###
 
+.claude/
+.codex/
 .jekyll-cache/
+AGENTS.md
+CLAUDE.md
 _site-staging/
 _site/
